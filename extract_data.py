@@ -69,5 +69,6 @@ def prepare_data(item_listing):
 def export_data(l):
     df = pandas.DataFrame(l)
     print(df)
+    df.to_csv("output.csv")
 
 
