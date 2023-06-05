@@ -3,10 +3,10 @@
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
+* [Design](#design)
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
@@ -15,6 +15,10 @@
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
+## Design
+![Example screenshot](./img/design.png)
+<!-- ![Example screenshot](./img/screenshot.png) -->
+<!-- If you have screenshots you'd like to share, include them here. -->
 
 ## General Information
 - This project intend to help users to automate the searching of property that they are looking for based on the pre-stroed search criteria and get insight of property data.
@@ -24,30 +28,28 @@
   1. Obtaining the search criteria from S3 bucket.
   2. Calling customized API built with FLASK for web scrapping from https://www.propertyguru.com.sg using selenuim and beautiful soup. 
   3. Upload the extracted data to S3 bucket.
-<!-- Screenshot here -->
+<!-- Airflow Screenshot here -->
 - AWS Glue job is used to transform the data written in python. Transfromed data is stored in S3 bucket.
 - AWS Athena is used to created database from transformed data S3 bucket and run query driectly on S3 for analysis.
 - Query result from AWS Athena is viauslize using Tableau.
-<!-- Screenshot here -->
+<!-- Visualize Screenshot here -->
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Python - version 3.10.9
+- Streamlit - version 2.0
+- Flask - version 2.3.2
+- Docker - version 3.0
+- Airflow - version 2.4.2
+- Docker Compose - 20.10.17
+- Selenium - version 4.9.1
+- beautifulsoup4 - version 4.12.2
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
-
-
-## Screenshots
-<!-- ![Example screenshot](./img/screenshot.png) -->
-<!-- If you have screenshots you'd like to share, include them here. -->
+- User uploads search criteria with web app.
+- Get insight of property data.
 
 
 ## Setup
@@ -64,19 +66,15 @@ Provide various use cases and code examples here.
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
-
+Project is: _in progress_ 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
 Room for improvement:
 - Improvement to be done 1
 - Improvement to be done 2
 
 To do:
-- Feature to be added 1
-- Feature to be added 2
+- Send email alert to user when the property that meets criteria is found.
 
 
 ## Acknowledgements
@@ -87,7 +85,10 @@ Give credit here.
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+feel free to contact me! 
+- Gmail amandaayechanmoe@gmail.com
+- LinkedIn https://www.linkedin.com/in/amanda-aye-chan-moe/
+
 
 
 <!-- Optional -->
