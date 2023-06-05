@@ -17,12 +17,18 @@
 
 
 ## General Information
-- This project intend to help users to automate the searching of property that they are looking for based on the pre-stroed search criterias and get insight of property data.
-- In this project Streamlit is used for web application to let users to submit their search criterias such as MRT and property type room or whole unit. Once user has submitted search criterias, those are stroed in S3 bucket.
-./Screenshot01.png
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
+- This project intend to help users to automate the searching of property that they are looking for based on the pre-stroed search criteria and get insight of property data.
+- In this project Streamlit is used for web application to let users to submit their search criteria such as MRT and property type room or whole unit. Once user has submitted search criterias, those are stroed in S3 bucket.
+![Example screenshot](./img/Screenshot01.png)
+- Airlflow is used to orchestrate the following tasks:
+  1. Obtaining the search criteria from S3 bucket.
+  2. Calling customized API built with FLASK for web scrapping from https://www.propertyguru.com.sg using selenuim and beautiful soup. 
+  3. Upload the extracted data to S3 bucket.
+<!-- Screenshot here -->
+- AWS Glue job is used to transform the data written in python. Transfromed data is stored in S3 bucket.
+- AWS Athena is used to created database from transformed data S3 bucket and run query driectly on S3 for analysis.
+- Query result from AWS Athena is viauslize using Tableau.
+<!-- Screenshot here -->
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
